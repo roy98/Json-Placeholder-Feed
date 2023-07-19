@@ -1,0 +1,30 @@
+import React from 'react'
+import "./MainLayout.css"
+
+interface Layout {
+  children?: React.ReactElement
+}
+
+const MainLayout: React.FC<Layout> = (props) => {
+  return (
+    <div id='container'>
+      <header>
+        <nav>
+          <h2>JSON Placeholder Feed</h2>
+        </nav>
+      </header>
+      <main>
+        <div className='main-content'>
+          {props.children}
+        </div>
+      </main>
+      <footer>
+        <strong>JSON Placeholder Feed</strong>
+        <p>&copy;Copyright {new Date().getFullYear()}</p>
+        <code>Test Powered by Digit-AD</code>
+      </footer>
+    </div>
+  )
+}
+
+export default MainLayout;
