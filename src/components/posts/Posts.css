@@ -141,6 +141,15 @@
     gap: 0.1rem;
 }
 
+@media screen and (max-width: 476px) {
+    .comments-grid {
+        padding-left: 1rem;
+        padding-right: 0;
+        margin: 2rem 10px;
+        gap: 0.1rem;
+    }
+}
+
 .comment-card {
     max-width: 600px;
     border-radius: 6px;
