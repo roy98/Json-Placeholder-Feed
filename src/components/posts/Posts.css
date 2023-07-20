@@ -1,0 +1,54 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.search-container input {
+    display: inline-block;
+    height: 54px;
+    padding: 0.9rem 10px;
+    border: 2px solid #000;
+    border-radius: 6px;
+    min-width: 60%;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.posts-grid {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.post-card {
+    width: 300px;
+    max-width: 300px;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(15, 15, 15, 0.129);
+    transition: box-shadow ease-in-out 0.2s;
+}
+
+.post-card:hover {
+    cursor: pointer;
+    box-shadow:
+    inset 0 -3em 3em rgba(198, 196, 196, 0),
+    0 0 0 2px rgba(17, 117, 128, 0.467),
+    0.3em 0.3em 1em rgba(15, 15, 15, 0);
+}
+
+.post-card-body {
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}

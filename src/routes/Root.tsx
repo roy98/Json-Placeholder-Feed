@@ -1,15 +1,14 @@
 import React from 'react'
 import MainLayout from '../components/layout/mainLayout'
+import Posts from '../components/posts/Posts'
 
 function Root() {
 
   return (
     <>
-      <MainLayout>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet cum esse, aspernatur ut, voluptate soluta, aliquam nesciunt possimus amet qui illo. Aperiam ipsam perferendis quidem ducimus cumque, necessitatibus corporis dolores!
-        </p>
-      </MainLayout>
+        <MainLayout>
+            <Posts />
+        </MainLayout>
     </>
   )
 }
