@@ -4,15 +4,18 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from './routes/Root'
 import PostDetail from './routes/PostDetails'
+import ErrorBoundary from './components/generic/ErrorBoundary'
 
 const routes = createBrowserRouter([
   {
     path: '/',
-    element: <Root />
+    element: <Root />,
+    errorElement: <ErrorBoundary />
   },
   {
     path: '/post/:id',
-    element: <PostDetail />
+    element: <PostDetail />,
+    errorElement: <ErrorBoundary />
   }
 ])
 
