@@ -90,6 +90,12 @@
     min-width: 80px;
 }
 
+.pagination-container .btn:disabled {
+    background-color: rgba(0, 0, 0, 0.058);
+    color: rgba(160, 160, 161, 0.801);
+    border: none;
+}
+
 .single-post-card {
     border-radius: 6px;
     padding: 20px;
