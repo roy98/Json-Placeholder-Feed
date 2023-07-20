@@ -3,11 +3,11 @@ import { useNavigate } from '../../../node_modules/react-router-dom/dist/index';
 import { Post } from '../../utils/types';
 import './Posts.css'
 
-interface Posts {
+interface PostsProps {
     posts: Array<Post>
 }
 
-const Posts: React.FC<Posts> = ({ posts }: Posts) => {
+const Posts: React.FC<PostsProps> = ({ posts }: PostsProps) => {
     const [searchText, setSearchText] = React.useState<string>('')
     const [filteredPosts, setFilteredPosts] = React.useState<Array<Post>>(posts)
     const navigate = useNavigate();

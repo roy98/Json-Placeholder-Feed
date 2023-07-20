@@ -90,7 +90,7 @@
     min-width: 80px;
 }
 
-.pagination-container .btn:disabled {
+.pagination-container .btn:disabled, .comments-grid .btn-disabled:disabled {
     background-color: rgba(0, 0, 0, 0.058);
     color: rgba(160, 160, 161, 0.801);
     border: none;
