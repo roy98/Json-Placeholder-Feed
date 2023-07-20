@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders details page of a post 1`] = `
+<div
+  id="container"
+>
+  <header>
+    <nav>
+      <h2>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          JSON Placeholder Feed
+        </a>
+      </h2>
+    </nav>
+  </header>
+  <main>
+    <div
+      className="main-content"
+    >
+      <div>
+        <div
+          className="single-post-container"
+        >
+          <div
+            className="single-post-card"
+          >
+            <h4
+              className="single-post-card-title"
+            />
+            <p
+              className="single-post-card-body"
+            />
+          </div>
+        </div>
+        <div
+          className="separator-vertical"
+        />
+        <div
+          className="comments-container"
+        >
+          <h3>
+            Comments
+          </h3>
+          <div
+            className="comments-grid"
+          >
+            <button
+              className="btn btn-disabled"
+              disabled={true}
+              onClick={[Function]}
+            >
+              Load more
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <strong>
+      JSON Placeholder Feed
+    </strong>
+    <p>
+      ©Copyright 
+      2023
+    </p>
+    <code>
+      Test Powered by Digit-AD
+    </code>
+  </footer>
+</div>
+`;

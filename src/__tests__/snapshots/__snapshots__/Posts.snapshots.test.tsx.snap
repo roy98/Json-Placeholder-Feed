@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders root page that list all posts 1`] = `
+<div
+  id="container"
+>
+  <header>
+    <nav>
+      <h2>
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          JSON Placeholder Feed
+        </a>
+      </h2>
+    </nav>
+  </header>
+  <main>
+    <div
+      className="main-content"
+    >
+      <div>
+        <div
+          className="search-container"
+        >
+          <input
+            data-testid="search-1"
+            onInput={[Function]}
+            onKeyDown={[Function]}
+            placeholder="Search a post by title"
+            title="Search by title"
+            type="search"
+            value=""
+          />
+          <a
+            className="btn"
+            onClick={[Function]}
+          >
+            Search
+          </a>
+        </div>
+        <p
+          data-testid="no-data-1"
+          style={
+            {
+              "margin": "4rem",
+              "textAlign": "center",
+            }
+          }
+        >
+          No Data found
+        </p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <strong>
+      JSON Placeholder Feed
+    </strong>
+    <p>
+      ©Copyright 
+      2023
+    </p>
+    <code>
+      Test Powered by Digit-AD
+    </code>
+  </footer>
+</div>
+`;

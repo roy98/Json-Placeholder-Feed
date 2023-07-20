@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from '../../node_modules/react-router-dom/dist/index';
+import { useParams } from 'react-router-dom';
 import Loader from '../components/generic/Loader';
 import MainLayout from '../components/layout/mainLayout'
 import SinglePost from '../components/posts/SinglePost'

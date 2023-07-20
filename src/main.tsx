@@ -4,7 +4,7 @@ import './index.css'
 import Root from './routes/Root'
 import PostDetail from './routes/PostDetails'
 import ErrorBoundary from './components/generic/ErrorBoundary'
-import { createBrowserRouter, RouterProvider } from '../node_modules/react-router-dom/dist/index'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const routes = createBrowserRouter([
   {

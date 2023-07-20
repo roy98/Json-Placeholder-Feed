@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from '../../../node_modules/react-router-dom/dist/index'
+import { Link } from 'react-router-dom'
 import Shape from '../../assets/shape_49.svg'
 import Ils from '../../assets/ils_21.svg'
 import './ErrorBoundary.css'

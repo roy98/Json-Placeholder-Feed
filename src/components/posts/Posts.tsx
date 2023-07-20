@@ -1,10 +1,20 @@
 import React from 'react'
-import { useNavigate } from '../../../node_modules/react-router-dom/dist/index';
+import { useNavigate } from 'react-router-dom';
 import { Post } from '../../utils/types';
+import Fuse from 'fuse.js'
 import './Posts.css'
 
 interface PostsProps {
     posts: Array<Post>
+}
+
+const fuseOptions = {
+    includeScore: true,
+    isCaseSensitive: false,
+    findAllMatches: false,
+    distance: 0,
+    keys: ['title'],
+    threshold: 0.6,
 }
 
 const Posts: React.FC<PostsProps> = ({ posts }: PostsProps) => {
@@ -29,9 +39,10 @@ const Posts: React.FC<PostsProps> = ({ posts }: PostsProps) => {
         if (!searchText.trim()) {
             setFilteredPosts(posts)
         }else {
-            const data = posts.filter((post) => post.title.includes(searchText))
-
-            setFilteredPosts(data)
+            const fuse = new Fuse(posts, fuseOptions)
+            const result = fuse.search(searchText)
+            
+            setFilteredPosts((prev) => result.map((result: any) => result.item))
         }
 
         setCurrentPage(1)
@@ -56,14 +67,14 @@ const Posts: React.FC<PostsProps> = ({ posts }: PostsProps) => {
         <React.Fragment>
             <div>
                 <div className='search-container'>
-                    <input type="search" title='Search by title' placeholder='Search a post by title' value={searchText} 
+                    <input data-testid="search-1" type="search" title='Search by title' placeholder='Search a post by title' value={searchText} 
                             onInput={(event) => setSearchText(event.currentTarget.value)} onKeyDown={(event) => onKeyPressed(event.key)} />
                     <a className='btn' onClick={() => filterByTitle()}>Search</a>
                 </div>
                 {filteredPosts?.length > 1 ? 
                     (
                     <>
-                        <div className='posts-grid'>
+                        <div data-testid="posts-grid-1" className='posts-grid'>
                             {filteredPosts.slice(START_INDEX, END_INDEX).map((post, index) => (
                                 <div className='post-card' key={`${index}-${post.id}`} onClick={() => getPostDetails(post.id)}>
                                     <h4 className='post-card-title'>{post.title}</h4>
@@ -78,7 +89,7 @@ const Posts: React.FC<PostsProps> = ({ posts }: PostsProps) => {
                             </div>
                         </div>
                     </>) : (
-                    <p style={{textAlign: 'center', margin: '4rem'}}>No Data found</p>
+                    <p data-testid="no-data-1" style={{textAlign: 'center', margin: '4rem'}}>No Data found</p>
                 )}
             </div>
         </React.Fragment>

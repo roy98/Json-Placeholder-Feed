@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from '../../../node_modules/react-router-dom/dist/index'
+import { Link } from 'react-router-dom'
 import "./MainLayout.css"
 
 interface Layout {

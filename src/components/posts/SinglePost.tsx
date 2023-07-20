@@ -10,7 +10,6 @@ interface SinglePostProps {
 const SinglePost: React.FC<SinglePostProps> = ({ post, comments }: SinglePostProps) => {
 
     // Paging
-    const TOTAL_COMMENTS = comments.length
     const ITEMS_TO_PREVIEW = 3
     const [currentIndex, setCurrentIndex] = React.useState<number>(ITEMS_TO_PREVIEW)
 
