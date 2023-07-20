@@ -17,15 +17,32 @@
 }
 
 .posts-grid {
-    margin-top: 4rem;
+    margin: 4rem 0;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
+@media screen and (max-width: 888px) {
+    .posts-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .post-card {
-    width: 300px;
     max-width: 300px;
     border-radius: 6px;
     padding: 20px;
@@ -51,4 +68,93 @@
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+.pagination-container {
+    width: 100%;
+    max-width: 250px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagination-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.pagination-container .btn {
+    min-width: 80px;
+}
+
+.single-post-card {
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(15, 15, 15, 0.129);
+    transition: box-shadow ease-in-out 0.2s;
+}
+
+.single-post-card-body {
+    text-align: justify;
+}
+
+.separator-vertical {
+    height: 150px;
+    border-left: 2px solid rgba(0, 0, 0, 0.355);
+    margin: 1rem;
+    margin-left: 1rem;
+}
+
+.separator-vertical-50 {
+    height: 50px;
+    border-left: 2px solid rgba(0, 0, 0, 0.355);
+    margin: 4px 1rem;
+    margin-left: 1rem;
+}
+
+.comments-container h3 {
+    text-align: left;
+    font-size: 36px;
+    line-height: 1rem;
+    padding: 0 1rem;
+}
+
+.comments-grid {
+    display: grid;
+    grid-template-rows: minmax(150px, auto);
+    grid-template-columns: 1fr;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 2rem 10px;
+    gap: 0.1rem;
+}
+
+.comment-card {
+    max-width: 600px;
+    border-radius: 6px;
+    padding: 16px;
+    box-shadow:
+    inset 0 -3em 3em rgba(0, 0, 0, 0.058),
+    0 0 0 2px rgba(255, 255, 255, 0.456),
+    0.3em 0.3em 1em rgba(15, 15, 15, 0.081);
+}
+
+.comment-card .comment-card-title {
+    text-align: left;
+}
+
+.comment-card .comment-card-body {
+    text-align: justify;
+    font-size: 14px;
+}
+
+.comments-grid .btn {
+    max-width: 600px;
+    margin-top: 2rem;
 }

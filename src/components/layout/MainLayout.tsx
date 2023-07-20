@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from '../../../node_modules/react-router-dom/dist/index'
 import "./MainLayout.css"
 
 interface Layout {
@@ -10,7 +11,7 @@ const MainLayout: React.FC<Layout> = (props) => {
     <div id='container'>
       <header>
         <nav>
-          <h2>JSON Placeholder Feed</h2>
+          <h2><Link to={'/'}>JSON Placeholder Feed</Link></h2>
         </nav>
       </header>
       <main>

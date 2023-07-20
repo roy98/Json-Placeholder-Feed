@@ -41,12 +41,15 @@ nav {
     text-align: left;
 }
 
-nav h2 {
+nav h2 a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
     font-size: 2rem;
     transition: all ease-in 0.2s;
 }
 
-nav h2:hover {
+nav h2 a:hover {
     cursor: pointer;
     font-size: 2.02rem;
     text-shadow: 2px 4px#595555;
